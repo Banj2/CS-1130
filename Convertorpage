@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+
+</head>
+<body>
+    <h1> Conversion Calculator</h1>
+    <p>
+<label for="n1">Number To Convert:</label> 
+<input id="n1" name="n1" type="number">
+
+
+<button onclick="cel2far()"> Compute Celcius to Fahrenheit </button>
+
+<button onclick="far2cel()"> Compute Fahrenheit to Celcius </button>
+
+</p>
+
+<p>
+<label for="result" id="reslabel">The result is:</label>  
+<input id="result" name="result" type="number" readonly></input>
+
+<button onclick="m2f()"> Compute Meters to Feet </button>
+
+<button onclick="f2m()"> Compute Feet to Meters </button>
+</p>
+   <br> 
+ <script>
+    
+    function cel2far()
+{
+  var a,b,c;
+
+
+  a = document.getElementById("n1").value*1;  
+  b = 1.8
+  c = 32
+
+
+  let z  = (a*b)+c;
+
+  
+  document.getElementById("reslabel").innerHTML='The Fahrenheit of  '
+       +a+' is:';
+   document.getElementById("result").value=z;
+
+}
+</script>
+
+<script>
+    
+    function far2cel()
+{
+  var a,b,c;
+
+ 
+  a = document.getElementById("n1").value*1;  
+  b = 1.8
+  c = 32
+
+ 
+ 
+  let z  = (a-c)*b;
+
+
+  document.getElementById("reslabel").innerHTML='The Celcius of  '
+       +a+' is:';
+   document.getElementById("result").value=z;
+
+}
+</script>
+
+<script>
+    
+    function m2f()
+{
+  var a,b;
+
+ 
+  a = document.getElementById("n1").value*1;  
+  b = 3.28
+ 
+
+ 
+ 
+  let z  = a*b;
+
+ 
+  document.getElementById("reslabel").innerHTML='The foot/feet of  '
+       +a+' is:';
+   document.getElementById("result").value=z;
+
+}
+</script>
+
+<script>
+    
+    function f2m()
+{
+  var a,b;
+
+  
+  a = document.getElementById("n1").value*1;  
+  b = 0.3048
+ 
+
+ 
+ 
+  let z  = a*b;
+
+  
+  document.getElementById("reslabel").innerHTML='The Meter/s of  '
+       +a+' is:';
+   document.getElementById("result").value=z;
+
+}
+</script>
+</body>
+</html>
